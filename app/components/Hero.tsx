@@ -13,7 +13,7 @@ export default function Hero() {
         {/* Left content */}
         <div className="flex-1 text-center md:text-left">
           <h1 className="text-4xl md:text-6xl font-bold mb-4">
-            Hi, I'm Fahad Ali Siddiqui
+            Hi, I&apos;m Fahad Ali Siddiqui
           </h1>
           <h2 className="text-2xl md:text-3xl font-semibold text-cyan-400 mb-4">
             Full Stack Developer
