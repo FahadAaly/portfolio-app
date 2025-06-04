@@ -1,71 +1,85 @@
-import { useState } from "react";
+"use client";
+import React, { useState } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
+import SideDrawer from "./drawer/SideDrawer";
+import BlueButton from "./Buttons/BlueButton";
 
-export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  //   const [dark, setDark] = useState(
-  //     () => localStorage.getItem("theme") === "dark"
-  //   );
+const navItems = [
+  {
+    text: "Home",
+    href: "#",
+  },
+  {
+    text: "About Me",
+    href: "#about",
+  },
+  {
+    text: "Skills",
+    href: "#skills",
+  },
+  {
+    text: "Projects",
+    href: "#projects",
+  },
+  {
+    text: "Experience",
+    href: "#experience",
+  },
+];
 
-  //   useEffect(() => {
-  //     document.documentElement.classList.toggle("dark", dark);
-  //     localStorage.setItem("theme", dark ? "dark" : "light");
-  //   }, [dark]);
+const Navbar = () => {
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+
+  const handleDrawerButtonClick = () => {
+    setIsDrawerOpen(true);
+  };
+
+  const handleClick = () => {
+    const phoneNumber = "+491638496235"; 
+    const message = "Hello, I would like to connect with you!"; 
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
+      message
+    )}`;
+    window.open(whatsappUrl, "_blank"); // Opens WhatsApp Web in a new tab
+  };
 
   return (
-    <nav className="bg-gray-800 p-4 fixed w-full top-0 z-50 dark:bg-gray-900">
-      <div className="max-w-7xl mx-auto flex justify-between items-center">
-        <div className="text-xl font-bold">Fahad Ali</div>
-        <div className="flex items-center gap-4">
-          {/* <button
-            onClick={() => setDark(!dark)}
-            className="text-white text-sm bg-gray-600 px-2 py-1 rounded"
-          >
-            {dark ? "Light Mode" : "Dark Mode"}
-          </button> */}
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden text-white"
-          >
-            ☰
-          </button>
+    <div className="px-10 py-7 border-gray-700 border-2 rounded-2xl max-[450px]:px-5 max-[450px]:py-3">
+      <div className="flex justify-between items-center">
+        <div className="max-[1000px]:hidden pointer">
+          <a href="#">
+            <p className="text-3xl text-cyan-500 max-[550px]:text-2xl max-[400px]:text-xl">
+              {`<F`}
+              <span className="text-white">{`ahad`}</span>
+              {`/> `}
+            </p>
+          </a>
         </div>
-        <ul
-          className={`md:flex space-x-4 ${
-            isOpen ? "block" : "hidden"
-          } md:block`}
-        >
-          <li>
-            <a href="#hero" className="hover:text-cyan-400">
-              Home
+        <div className="flex justify-between gap-10 max-[1200px]:gap-5 max-[1000px]:hidden">
+          {navItems.map((item) => (
+            <a
+              key={item.text}
+              href={item.href}
+              className="p-2 transition-all duration-200 hover:bg-cyan-500 hover:text-black cursor-pointer rounded-md"
+            >
+              {item.text}
             </a>
-          </li>
-          <li>
-            <a href="#about" className="hover:text-cyan-400">
-              About
-            </a>
-          </li>
-          <li>
-            <a href="#skills" className="hover:text-cyan-400">
-              Skills
-            </a>
-          </li>
-          {/* <li>
-            <a href="#experience" className="hover:text-cyan-400">
-              Experience
-            </a>
-          </li> */}
-          <li>
-            <a href="#projects" className="hover:text-cyan-400">
-              Projects
-            </a>
-          </li>
-          {/* <li>
-            <a href="#contact" className="hover:text-cyan-400">
-              Contact
-            </a>
-          </li> */}
-        </ul>
+          ))}
+        </div>
+        <div className="min-[1000px]:hidden">
+          {/* <div className="bg-[#01bf69] p-3 rounded-[7px]"> */}
+          <div onClick={handleDrawerButtonClick}>
+            <GiHamburgerMenu size={25} />
+          </div>
+          {/* </div> */}
+        </div>
+        <div className="pointer">
+          <BlueButton text={"Contact Me"} onClick={handleClick} />
+        </div>
       </div>
-    </nav>
+      <SideDrawer open={isDrawerOpen} onClose={() => setIsDrawerOpen(false)} />
+    </div>
   );
-}
+};
+
+export default Navbar;

@@ -1,13 +1,13 @@
 // src/components/Hero.jsx
 import { FaLinkedin, FaGithub, FaEnvelope } from "react-icons/fa";
 import Image from "next/image";
-import profileImage from "../../public/images/ProfileImage.jpeg";
+import heroImage from "../../public/assets/heroImage.png";
 
 export default function Hero() {
   return (
     <section
       id="hero"
-      className="min-h-screen flex items-center bg-gray-900 text-white px-4 py-20"
+      className="min-h-screen flex items-center text-white px-4 py-20"
     >
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center gap-12">
         {/* Left content */}
@@ -60,7 +60,7 @@ export default function Hero() {
 
         {/* Right content */}
         <Image
-          src={profileImage}
+          src={heroImage}
           alt="Fahad Ali Siddiqui"
           className="rounded-lg shadow-lg w-full max-w-sm mx-auto"
           placeholder="blur"

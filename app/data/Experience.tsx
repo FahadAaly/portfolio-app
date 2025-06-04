@@ -1,0 +1,72 @@
+const experience = [
+  {
+    designation: "Frontend Developer",
+    companyName: "DeepSight",
+    titleText:
+      "Developed scalable frontend GUIs using React.js, Next.js, JavaScript, and TypeScript, simplifying Data & Automating Processes for Smarter Business",
+    joinDate: "Feb, 2023",
+    endDate: "Nov 2024",
+    location: "Osnabruck",
+    country: "Germany",
+    website: "https://deepsight.de/",
+    technologies: ["Javascript", "Reactjs", "Nextjs", "Python", "CI/CD"],
+  },
+  {
+    designation: "Fullstack Web Developer",
+    companyName: "Outgive Inc",
+    titleText:
+      "Developing front-end, backend (B2C, B2B) in E-COMMERCE solutions",
+    joinDate: "Nov, 2022",
+    endDate: "April 2023",
+    location: "Markham, Ontario",
+    country: "Canada",
+    website: "https://www.linkedin.com/company/outgive/",
+    technologies: [
+      "Javascript",
+      "Reactjs",
+      "Nextjs",
+      "Node.js",
+      "TailwindCSS",
+      "MUI",
+    ],
+  },
+  {
+    designation: "Fullstack Developer",
+    companyName: "Progstream",
+    titleText: "Developing front-end, backend (B2C, B2B) in Fintech Solutions",
+    joinDate: "Feb, 2019",
+    endDate: "Oct, 2022",
+    location: "Karachi",
+    country: "Pakistan",
+    website: "https://progstream.com/",
+    technologies: [
+      "Javascript",
+      "Typescript",
+      "Reactjs",
+      "Nextjs",
+      "Java",
+      "PHP",
+    ],
+  },
+  {
+    designation: "Frontend  Web Developer",
+    companyName: "Appbakerz",
+    titleText: "Developing front-end (B2C, B2B) as a web developer",
+    joinDate: "Jun, 2018",
+    endDate: "December 2018",
+    location: "Karachi",
+    country: "Pakistan",
+    website: "",
+    technologies: [
+      "HTML",
+      "CSS",
+      "Bootstrap",
+      "JavaScript",
+      "Reactjs",
+      "Vue.js",
+      "Java",
+    ],
+  },
+];
+
+export default experience;
