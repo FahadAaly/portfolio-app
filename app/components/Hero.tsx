@@ -16,10 +16,10 @@ export default function Hero() {
             Hi, I&apos;m Fahad Ali Siddiqui
           </h1>
           <h2 className="text-2xl md:text-3xl font-semibold text-cyan-400 mb-4">
-            Full Stack Developer
+            Frontend Developer
           </h2>
           <p className="text-lg text-gray-300 mb-6">
-            Full Stack Developer with 6+ years of experience building scalable
+            Frontend Developer with 6+ years of experience building scalable
             web apps using JavaScript, TypeScript, React, Angular, Java, SQL,
             and more.
           </p>
