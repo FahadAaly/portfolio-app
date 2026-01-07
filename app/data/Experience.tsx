@@ -5,7 +5,7 @@ const experience = [
     titleText:
       "Developed scalable frontend GUIs using React.js, Next.js, JavaScript, and TypeScript, simplifying Data & Automating Processes for Smarter Business",
     joinDate: "Feb, 2023",
-    endDate: "Nov 2024",
+    endDate: "Nov 2025",
     location: "Osnabruck",
     country: "Germany",
     website: "https://deepsight.de/",
